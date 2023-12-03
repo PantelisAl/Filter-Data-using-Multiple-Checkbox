@@ -32,7 +32,7 @@
                             <h6>Brand List</h6>
                             <hr>
                             <?php
-                              $con = mysqli_connect("localhost","root","123456","filter_search");
+                              $con = mysqli_connect("localhost","root","","filter_search");
                               
                               $brand_query = "SELECT *
                                               FROM brands";
@@ -51,7 +51,7 @@
                                    ?>  
                                   <div>
                                       <input type="checkbox" name="brands[]" value ="<?= $brandlist['id']; ?>" <?php if(in_array($brandlist['id'],$checked)){echo "checked";} ?>/>
-                                      <?= $brandlist['name']?>
+                                      <?= $brandlist['name'];?>
                                   </div>
                                 
                                 <?php
